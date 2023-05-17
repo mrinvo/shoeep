@@ -26,8 +26,8 @@ class BlogController extends Controller
     }
     public function show($id){
         $blogs = Blog::select([
-            'title_'. app()->getLocale(),
-            'description'. app()->getLocale(),
+            'title_'. app()->getLocale() . 'as title',
+            'description'. app()->getLocale() . 'as description',
             'image'
         ])->where('id',$id)->first();
 

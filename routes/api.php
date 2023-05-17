@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'blog', 'middleware' => 'lang'], function(){
     Route::get('/index',[BlogController::class,'index']);
-    Route::get('/show/{id}',[BlogController::class,'index']);
+    Route::get('/show/{id}',[BlogController::class,'show']);
 
 });
 
