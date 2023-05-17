@@ -13,7 +13,7 @@ class BlogController extends Controller
     public function index(){
         $blogs = Blog::select([
             'title_'. app()->getLocale(),
-            'description'. app()->getLocale(),
+            'description_'. app()->getLocale(),
             'image'
         ])->get();
 
