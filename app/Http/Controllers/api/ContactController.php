@@ -17,9 +17,20 @@ class ContactController extends Controller
             'phone' => 'required|numeric',
 
         ]);
-        $data = $request->all();
 
-        $contact =  Contact::create($data);
+
+        $file = $request->file('file')->store('api/files','public');
+
+        $contact =  Contact::create([
+
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'service_type' => $request->service_type,
+            'service_details' => $request->service_details,
+            'file' => asset('storage/'.$file),
+
+        ]);
 
         $response = [
             'code' => 201,
