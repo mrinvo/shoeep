@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\ContactController;
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\api\BlogController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
