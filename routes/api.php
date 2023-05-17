@@ -27,7 +27,7 @@ Route::group(['prefix' => 'blog', 'middleware' => 'lang'], function(){
 });
 
 Route::group(['prefix' => 'contact', 'middleware' => 'lang'], function(){
-    Route::get('/index',[ContactController::class,'index']);
-    Route::get('/show/{id}',[ContactController::class,'index']);
+    Route::post('/store',[ContactController::class,'store']);
+
 
 });
