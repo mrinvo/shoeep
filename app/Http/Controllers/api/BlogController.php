@@ -13,7 +13,7 @@ class BlogController extends Controller
     public function index(){
         $blogs = Blog::select([
             'title_'. app()->getLocale() . ' as title',
-            'description'. app()->getLocale() . ' as description',
+            'description_'. app()->getLocale() . ' as description',
             'image'
         ])->get();
 
@@ -27,7 +27,7 @@ class BlogController extends Controller
     public function show($id){
         $blogs = Blog::select([
             'title_'. app()->getLocale() . ' as title',
-            'description'. app()->getLocale() . ' as description',
+            'description_'. app()->getLocale() . ' as description',
             'image'
         ])->where('id',$id)->first();
 
