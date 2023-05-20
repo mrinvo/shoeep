@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Blog;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('admin.home');
+    $blogs = count(Blog::all());
+    $contacts = count(Contact::all());
+    return view('admin.home',compact('blogs,contacts'));
+
 })->middleware(['auth:admin'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
