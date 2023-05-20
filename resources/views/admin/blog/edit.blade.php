@@ -47,12 +47,12 @@
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Description Arabic</label>
-                    <textarea name="description_ar" class="form-control" id="exampleInputEmail1" cols="30" rows="10">{{ $blog->descriptioni->ar }}</textarea>
+                    <textarea name="description_ar" class="form-control" id="exampleInputEmail1" cols="30" rows="10">{{ $blog->description_ar }}</textarea>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Description Duetch</label>
-                    <textarea name="description_du" class="form-control" id="exampleInputEmail1" cols="30" rows="10">{{ $blog->descriptioni->du }}</textarea>
+                    <textarea name="description_du" class="form-control" id="exampleInputEmail1" cols="30" rows="10">{{ $blog->description_du }}</textarea>
                   </div>
 
                   <div class="form-group">
