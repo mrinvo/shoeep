@@ -12,6 +12,7 @@ class BlogController extends Controller
 
     public function index(){
         $blogs = Blog::select([
+            'id',
             'title_'. app()->getLocale() . ' as title',
             'description_'. app()->getLocale() . ' as description',
             'image'
@@ -26,6 +27,7 @@ class BlogController extends Controller
     }
     public function show($id){
         $blogs = Blog::select([
+            'id',
             'title_'. app()->getLocale() . ' as title',
             'description_'. app()->getLocale() . ' as description',
             'image'
