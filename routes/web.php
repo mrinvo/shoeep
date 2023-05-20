@@ -38,7 +38,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/admin/blog/create',[BlogController::class,'create']);
     Route::get('/admin/blog/edit/{id}',[BlogController::class,'edit']);
     Route::post('/admin/blog/update',[BlogController::class,'store']);
-    Route::get('/admin/blog/destroy/{id}',[BlogController::class,'destroy']);
+    Route::get('/admin/blog/delete/{id}',[BlogController::class,'destroy']);
     Route::post('/admin/blog/store',[BlogController::class,'store']);
 
 });
