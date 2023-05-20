@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>DataTables</h1>
+            <h1>Posts</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -25,28 +25,33 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">All your posts</h3>
+                <h3 class="card-title">All your contact</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Title Arabic</th>
-                    <th>Title Dutech</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Service type</th>
+                    <th>Service details</th>
                     <th>Created at</th>
-                    <th>Actions</th>
+                    <th>File</th>
                   </tr>
                   </thead>
                   <tbody>
-                    @foreach ($blogs as $blog)
+                    @foreach ($contacts as $contact)
                     <tr>
-                        <td>{{ $blog->title_ar }}</td>
-                        <td>{{ $blog->title_du }}</td>
-                        <td>{{ $blog->created_at }}</td>
+                        <td>{{ $contact->name }}</td>
+                        <td>{{ $contact->email }}</td>
+                        <td>{{ $contact->phone }}</td>
+                        <td>{{ $contact->service_type }}</td>
+                        <td>{{ $contact->service_details }}</td>
+                        <td>{{ $contact->created_at }}</td>
                         <td>
-                            <a class="btn btn-primary" href="/admin/blog/edit/{{ $blog->id }}">edit</a> <br>
-                            <a class="btn btn-danger" href="/admin/blog/delete/{{ $blog->id }}">Delete</a>
+                            <button class="btn btn-primary" onclick="window.open({{ $blog->file }})">Show</button> <br>
                         </td>
                       </tr>
                     @endforeach
@@ -54,10 +59,12 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Title Arabic</th>
-                    <th>Title Dutech</th>
-                    <th>Created at</th>
-                    <th>Actions</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Service type</th>
+                    <th>Service details</th>
+                    <th>File</th>
                   </tr>
                   </tfoot>
                 </table>

@@ -46,7 +46,7 @@
               <li class="nav-item">
                 <a href="/admin/blog/index" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>All blogs </p>
+                  <p>All posts </p>
                 </a>
               </li>
               <li class="nav-item">
@@ -58,6 +58,27 @@
 
             </ul>
           </li>
+
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Contact
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/contact/index" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All requests </p>
+                </a>
+              </li>
+
+
+            </ul>
+          </li>
+
 
         </ul>
       </nav>
