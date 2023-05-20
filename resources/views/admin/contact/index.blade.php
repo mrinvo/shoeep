@@ -64,6 +64,7 @@
                     <th>Phone</th>
                     <th>Service type</th>
                     <th>Service details</th>
+                    <th>Created at</th>
                     <th>File</th>
                   </tr>
                   </tfoot>
