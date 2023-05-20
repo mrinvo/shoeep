@@ -31,7 +31,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="/admin/blog/update">
+              <form method="POST" action="/admin/blog/update" enctype="multipart/form-data">
                 @csrf
                 <input hidden type="text" value="{{ $blog->id }}" name="id">
                 <div class="card-body">
