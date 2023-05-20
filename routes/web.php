@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $blogs = count(Blog::all());
     $contacts = count(Contact::all());
-    return view('admin.home',compact('blogs,contacts'));
+    return view('admin.home',compact('blogs','contacts'));
 
 })->middleware(['auth:admin'])->name('dashboard');
 
