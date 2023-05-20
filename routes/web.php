@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,11 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/admin/blog/update',[BlogController::class,'update']);
     Route::get('/admin/blog/delete/{id}',[BlogController::class,'destroy']);
     Route::post('/admin/blog/store',[BlogController::class,'store']);
+
+    //contact
+
+    Route::get('/admin/contact/index',[ContactController::class,'index']);
+    Route::get('/admin/contact/show/{id}',[ContactController::class,'show']);
 
 });
 
