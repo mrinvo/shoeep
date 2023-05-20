@@ -16,9 +16,30 @@ class BlogController extends Controller
         return view('admin.blog.index',compact('blogs'));
     }
 
-    public function show($id){
-        $blogs = Blog::findOrFail($id);
-        return view('admin');
+    public function edit($id){
+        $blog = Blog::findOrFail($id);
+        return view('admin.blog.edit',compact('blog'));
+    }
+    public function update(Request $request){
+        $blog = Blog::find($request->id);
+
+        if($request->file('image')){
+            $im = $request->file('image')->store('api/files','public');
+            $image = asset('storage/'.$im);
+        }else{
+            $image = $blog->image;
+        }
+
+
+        $blog->update([
+            'title_ar' => $request->title_ar,
+            'title_du'=> $request->title_du,
+            'description_ar'=> $request->description_ar,
+            'description_du'=> $request->description_du,
+            'image' => $image,
+
+        ]);
+        return redirect('/admin/blog/edit/'. $request->id);
     }
 
     public function create(){
@@ -26,8 +47,23 @@ class BlogController extends Controller
     }
 
     public function store(Request $request){
-        Blog::create($request->all());
+        $image = $request->file('image')->store('api/files','public');
+        Blog::create([
+            'title_ar' => $request->title_ar,
+            'title_du'=> $request->title_du,
+            'description_ar'=> $request->description_ar,
+            'description_du'=> $request->description_du,
+            'image' => asset('storage/'.$image),
 
+        ]);
+
+        return redirect('/admin/blog/index');
+    }
+
+
+    public function destroy($id){
+        $blog = Blog::find($id);
+        $blog->delete();
         return redirect('/admin/blog/index');
     }
 }

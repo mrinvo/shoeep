@@ -45,8 +45,8 @@
                         <td>{{ $blog->title_du }}</td>
                         <td>{{ $blog->created_at }}</td>
                         <td>
-                            <a href="/admin/blog/edit">edit</a> <br>
-                            <a href="/admin/blog/delete">Delete</a>
+                            <a class="btn btn-primary" href="/admin/blog/edit/{{ $blog->id }}">edit</a> <br>
+                            <a class="btn btn-danger" href="/admin/blog/delete/{{ $blog->id }}">Delete</a>
                         </td>
                       </tr>
                     @endforeach
