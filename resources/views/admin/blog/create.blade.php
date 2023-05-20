@@ -31,7 +31,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="/admin/blog/store">
+              <form method="POST" action="/admin/blog/store" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
