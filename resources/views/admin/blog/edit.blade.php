@@ -56,7 +56,7 @@
                   </div>
 
                   <div class="form-group">
-                    <img width="400" height="400" src="{{ $blog->image }}" alt="">
+                    <img width="400" height="400" src="{{ $blog->image }}" alt=""> <br>
                     <label for="exampleInputFile">Choose new image</label>
                     <div class="input-group">
                       <div class="custom-file">
