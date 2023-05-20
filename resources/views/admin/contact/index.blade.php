@@ -51,7 +51,7 @@
                         <td>{{ $contact->service_details }}</td>
                         <td>{{ $contact->created_at }}</td>
                         <td>
-                            <button class="btn btn-primary" onclick="window.open({{ $blog->file }})">Show</button> <br>
+                            <button class="btn btn-primary" onclick="window.open({{ $contact->file }})">Show</button> <br>
                         </td>
                       </tr>
                     @endforeach
