@@ -51,7 +51,7 @@
                         <td>{{ $contact->service_details }}</td>
                         <td>{{ $contact->created_at }}</td>
                         <td>
-                            <a href="{{ $contact->file }}" class="btn btn-primary" >Show</a> <br>
+                            <a target="_blank" href="{{ $contact->file }}" class="btn btn-primary" >Show</a> <br>
                         </td>
                       </tr>
                     @endforeach
